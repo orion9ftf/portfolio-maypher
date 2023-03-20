@@ -17,6 +17,25 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <system.webServer>
+    <httpProtocol>
+      <customHeaders>
+        <add name="Content-Security-Policy" value="default-src 'self';" />
+        <add name="Header set X-XSS-Protection" value="1; mode=block" />
+        <add name="Header set X-Frame-Options" value="sameorigin" />
+        <add name="Header set X-Content-Type-Options" value="nosniff" />
+        <add name="Header set X-Permitted-Cross-Domain-Policies" value="none" />
+        <add name="Header always set Strict-Transport-Security" value="max-age=63072000;" />
+        <add name="Header set Referrer-Policy" value="same-origin" />
+        <add name="Header set Feature-Policy" value="'self' https://te-lo-explico-simplificado.com/" />
+        <add name="Feature-Policy: geolocation" value="'self' https://te-lo-explico-simplificado.com/" />
+        <add name="Header set Strict-Transport-Security" value="max-age=31536000; includeSubDomains; preload" />
+        <!-- <add name="Header set Content-Security-Policy" value="default-src * data:; script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline'" /> -->
+        <add name="Header set Referrer-Policy" value="no-referrer-when-downgrade" />
+      </customHeaders>
+    </httpProtocol>
+  </system.webServer>
 </head>
 
 <body>
@@ -26,17 +45,17 @@
     <div class="d-flex flex-column">
       <div class="profile">
         <img src="assets/img/sam.jpeg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Eva Matus</a></h1>
+        <h1 class="text-light"><a href="index.html" rel="noopener noreferrer" target="_blank">Eva Matus</a></h1>
       </div>
 
       <nav class="nav-menu">
         <ul>
-          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-          <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
-          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+          <li class="active"><a href="index.html" rel="noopener noreferrer" target="_blank"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" rel="noopener noreferrer" target="_blank"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" rel="noopener noreferrer" target="_blank"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" rel="noopener noreferrer" target="_blank"><i class="bx bx-book-content"></i> Portfolio</a></li>
+          <li><a href="#services" rel="noopener noreferrer" target="_blank"><i class="bx bx-server"></i> Services</a></li>
+          <li><a href="#contact" rel="noopener noreferrer" target="_blank"><i class="bx bx-envelope"></i> Contact</a></li>
         </ul>
       </nav>
       
@@ -343,11 +362,11 @@
     </section>
   </main>
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <a href="#" class="back-to-top" rel="noopener noreferrer" target="_blank"><i class="icofont-simple-up"></i></a>
 
   <footer id="footer">
     <div class="container">
-      <a href="https://te-lo-explico-simplificado.com/" target="_blank" >My Blog</a>
+      <a href="https://te-lo-explico-simplificado.com/" rel="noopener noreferrer" target="_blank">My Blog</a>
     </div>
   </footer>
 
