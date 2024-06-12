@@ -17,25 +17,6 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <system.webServer>
-    <httpProtocol>
-      <customHeaders>
-        <add name="Content-Security-Policy" value="default-src 'self';" />
-        <add name="Header set X-XSS-Protection" value="1; mode=block" />
-        <add name="Header set X-Frame-Options" value="sameorigin" />
-        <add name="Header set X-Content-Type-Options" value="nosniff" />
-        <add name="Header set X-Permitted-Cross-Domain-Policies" value="none" />
-        <add name="Header always set Strict-Transport-Security" value="max-age=63072000;" />
-        <add name="Header set Referrer-Policy" value="same-origin" />
-        <add name="Header set Feature-Policy" value="'self' https://te-lo-explico-simplificado.com/" />
-        <add name="Feature-Policy: geolocation" value="'self' https://te-lo-explico-simplificado.com/" />
-        <add name="Header set Strict-Transport-Security" value="max-age=31536000; includeSubDomains; preload" />
-        <!-- <add name="Header set Content-Security-Policy" value="default-src * data:; script-src https: 'unsafe-inline' 'unsafe-eval'; style-src https: 'unsafe-inline'" /> -->
-        <add name="Header set Referrer-Policy" value="no-referrer-when-downgrade" />
-      </customHeaders>
-    </httpProtocol>
-  </system.webServer>
 </head>
 
 <body>
